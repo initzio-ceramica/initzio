@@ -1,0 +1,53 @@
+:root {
+  /* Colores semánticos */
+  --page-bg: #efe9dc;
+  --surface: #e4dcc8;
+  --footer-surface: #1c1e1b;
+  --text-primary: #26241c;
+  --text-secondary: #5c584c;
+  --border: #c9bfa6;
+  --accent: #3b4030;
+  --accent-hover: #2f332a;
+  --text-on-accent: #f5f1e7;
+  --text-on-dark: #f5f1e7;
+  --navbar-surface: rgba(239, 233, 220, 0.9);
+  --cta-background: linear-gradient(90deg, #574833 6%, #514431 15%, #424235 39%);
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+    --page-bg: #1b1b1b;
+    --surface: #292828;
+    --text-primary: #f2f4ef;
+    --text-secondary: #c3c8bf;
+    --border: #3a3d37;
+    --accent: #d9ddd5;
+    --accent-hover: #939f7f;
+    --text-on-accent: #1b1b1b;
+    --text-on-dark: #f2f4ef;
+    --navbar-surface: #1c1e1bf0;
+  }
+
+  /* Tipografía */
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-sans: "DM-Sans", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-display: clamp(2.6rem, 5vw + 1rem, 4.6rem);
+  --fs-h2: clamp(2rem, 3vw + 1rem, 3rem);
+  --fs-h3: clamp(1.3rem, 1vw + 1rem, 1.6rem);
+  --fs-body: 1.05rem;
+  --fs-nav: 0.980rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.78rem;
+
+  /* Layout */
+  --container-width: 1500px;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --section-pad-y: clamp(3.5rem, 6vw, 5rem);
+  --radius-sm: 4px;
+  --radius-md: 10px;
+
+  /* Movimiento */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 200ms;
+  --dur-medium: 380ms;
+}

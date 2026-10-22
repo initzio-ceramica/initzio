@@ -1,0 +1,39 @@
+.btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Asegura que quede por encima de todas las secciones */
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp img {
+  width: 34px;
+  height: 34px;
+}
+
+/* Responsive: Ajuste para celulares */
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  
+  .btn-whatsapp img {
+    width: 28px;
+    height: 28px;
+  }
+}

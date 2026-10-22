@@ -1,0 +1,31 @@
+.section-ideal-para{
+  width: 100%;
+  background: var(--surface);
+  z-index: -1;
+}
+
+.event-types {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2em var(--container-pad);
+  
+}
+
+.event-types__list {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+
+
+.event-types__item {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.event-types__dot {
+  color: var(--text-secondary);
+  padding: 0 0.5em;
+}

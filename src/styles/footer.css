@@ -1,0 +1,160 @@
+.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--section-pad-y) 0;
+  background-image: url("/Hero/DSC_5047.jpg");
+  background-size: cover;
+  background-position: center 55%;
+  color: var(--text-on-dark);
+}
+
+/* El overlay no depende del tema: la foto siempre necesita contraste oscuro
+   para que el texto claro se lea, en modo claro y en modo oscuro. */
+.footer__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 9, 7, 0.86) 0%,
+    rgba(10, 9, 7, 0.78) 45%,
+    rgba(10, 9, 7, 0.62) 100%
+  );
+}
+
+
+.footer__inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: flex;
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.footer__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1 1 60%;
+  min-width: 0;
+  margin-left: 0rem;
+}
+
+.footer__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: 1.15;
+  color: var(--text-on-dark);
+}
+
+.footer__underline {
+  width: 48px;
+  height: 1px;
+  background: var(--text-on-dark);
+  opacity: 0.6;
+}
+
+.footer__cta {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-on-dark);
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease-standard);
+}
+
+.footer__cta:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__divider {
+  flex: 0 0 auto;
+  width: 1px;
+  align-self: stretch;
+  background: var(--text-on-dark);
+  opacity: 0.25;
+}
+
+.footer__contact {
+  flex: 1 1 40%;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+}
+
+.footer__contact-item a {
+  color: var(--text-on-dark);
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease-standard);
+}
+
+.footer__contact-item a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--text-on-dark);
+}
+
+/* ───────────────────────── Responsive ───────────────────────── */
+
+@media (max-width: 860px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer__divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .footer__contact {
+    width: 100%;
+  }
+
+  .footer__decor {
+    width: 60px;
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__title {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+
+  .footer__decor {
+    display: none;
+  }
+}
