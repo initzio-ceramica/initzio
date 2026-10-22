@@ -5,8 +5,6 @@ import Carousel from "./components/Carousel";
 import CustomOrder from "./components/CustomOrder";
 import EventsHero from "./components/EventsHero";
 import HowItWorks from "./components/HowItWorks";
-import EventTypes from "./components/EventTypes";
-import ClosingCTA from "./components/ClosingCTA";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import type { Theme } from "./config/site";
@@ -24,7 +22,7 @@ import type { Theme } from "./config/site";
 Las secciones de 
 <EventTypes />
 <ClosingCTA />
-fueron eliminadas, para restaurarlas simplemente ubicarlas entre  howitworks y main
+fueron eliminadas, para restaurarlas simplemente importarlas otra vez y asignarlas debajo de howitworks
 */
 
 export default function App() {
